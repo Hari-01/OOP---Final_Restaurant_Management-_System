@@ -22,12 +22,13 @@ public class RestaurantState implements Runnable{
         int hrs=Integer.parseInt(date_string.substring(date_string.indexOf(' ')+1,date_string.indexOf(':')));
         int min=Integer.parseInt(date_string.substring(date_string.indexOf(':')+1,date_string.lastIndexOf(':')));
 
-        System.out.println("Hrs ="+hrs);
-        System.out.println("Min ="+min);
-        System.out.println(date_string);
+        //System.out.println("Hrs ="+hrs);
+        //System.out.println("Min ="+min);
+        //System.out.println(date_string);
         try{
         if(hrs<12)
         {
+
         state="close";
         long time_left=((60-min)+(11-hrs)*60)*60*1000;
         System.out.println("Restaurant is closed, will open after 12pm.");
@@ -63,7 +64,7 @@ public class RestaurantState implements Runnable{
         }}
         else{
             state="open";
-            System.out.println("in rstate"+st);
+            //System.out.println("in rstate"+st);
             DisplayServed dse=new DisplayServed(st);
             
         }

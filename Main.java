@@ -7,7 +7,7 @@ public class Main extends Menu
 {
     private static String passwordAdmin="Hello@123";
     static ArrayList<Order>ListOfOrders;
-    static ArrayList<Cook> ListOfCookStates;
+    static ArrayList<CookState> ListOfCookStates;
     static Thread servingThreads[];
     static int orderID =0;
     public static void main(String[] args)throws InterruptedException {
@@ -15,7 +15,7 @@ public class Main extends Menu
         Main m=new Main();
         servingThreads=new Thread[200];
         ListOfOrders=new ArrayList<Order>();
-        ListOfCookStates=new ArrayList<Cook>();
+        ListOfCookStates=new ArrayList<CookState>();
         
        // System.out.println(hrs);
         //System.out.println(date_string); 
@@ -29,7 +29,7 @@ public class Main extends Menu
 
         }*/
         Scanner sc=new Scanner(System.in);
-        Cook cookstate=new Cook();
+        CookState cookstate=new CookState();
         while(true)
         {
         System.out.println("If you are a customer press 1. If you are a part of admin press 2.");
@@ -63,7 +63,8 @@ public class Main extends Menu
                     int prep_time=sc.nextInt();
                     Admin admin=new Admin();
                     admin.update(item_name,price,prep_time);
-                    System.out.println("Updated!!");
+                    System.out.println("Updated!!. You can have a look");
+                    Menu.simpleTable();
                     break;
                     case 3:
                     System.out.println("Enter the code");
@@ -109,7 +110,7 @@ public class Main extends Menu
             order.interact();
             ListOfOrders.add(order);
             
-            cookstate=new Cook(order);
+            cookstate=new CookState(order);
 
             ListOfCookStates.add(cookstate);
             order.minPrepTime=cookstate.cook_time_allocate();
@@ -121,7 +122,7 @@ public class Main extends Menu
             //order.minPrepTime=cookstate.method();
             //ListOfOrders.add(order);
             order.order_print();
-            System.out.println("Arraylits"+Cook.cook.toString());
+            //System.out.println("Arraylits"+CookState.cook.toString());
             
             //Demo d=new Demo(order);
             //d.display();
@@ -136,7 +137,7 @@ public class Main extends Menu
             int inputtedOrderID=sc.nextInt();
             try{
             Order previousOrder=ListOfOrders.get(inputtedOrderID-1);
-            Cook getCookState=ListOfCookStates.get(inputtedOrderID-1);
+            CookState getCookState=ListOfCookStates.get(inputtedOrderID-1);
            // System.out.println(getCookState.hrs.get(0));
             String cookingState=getCookState.check();
             System.out.println(cookingState);

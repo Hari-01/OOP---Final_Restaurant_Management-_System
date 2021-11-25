@@ -138,12 +138,12 @@ import java.util.stream.Stream;
     prep_time.put(141,10);
 
     }
-    void show()
-    {
-        System.out.println(items.get(101));
-        System.out.println(price.get(101));
-        System.out.println(prep_time.get(101));
-    }
+    // void show()
+    // {
+    //     System.out.println(items.get(101));
+    //     System.out.println(price.get(101));
+    //     System.out.println(prep_time.get(101));
+    // }
 
     String getItem(int code)
     {

@@ -8,7 +8,7 @@ public class DisplayServed implements Runnable{
     DisplayServed(SeatAllottment st)
     {
         DisplayServed.st=st;
-        System.out.println(this.st);
+        //System.out.println(this.st);
     }
     DisplayServed(int time,int orderID/*,SeatAllottment st*/)
     {
@@ -18,7 +18,7 @@ public class DisplayServed implements Runnable{
     }
     public void run(){
         try{
-            System.out.println("In the thread");
+            //System.out.println("In the thread");
         Thread.sleep(sleepingTime);
         System.out.println("The order having order ID "+this.orderID+" is served. Pls collect it");
         }

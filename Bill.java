@@ -2,7 +2,7 @@ package smart_kitchen;
 
 import java.io.*;
 
-class Bill /*implements Serializable*/ {
+class Bill {
 
     int qty;
     String item;

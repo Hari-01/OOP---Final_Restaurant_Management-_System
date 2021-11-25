@@ -95,10 +95,10 @@ public class SeatAllottment {
                 SeatAllottment.four_tables=four_tables;
                 SeatAllottment.two_tables=two_tables;
                 SeatAllottment.extra_chairs=extra_chairs;
-                System.out.println("six tables are"+SeatAllottment.six_tables);
-                System.out.println("four tables are"+SeatAllottment.four_tables);
-                System.out.println("two tables are"+SeatAllottment.two_tables);
-                System.out.println(" extra chairs are"+SeatAllottment.extra_chairs);
+                // System.out.println("six tables are"+SeatAllottment.six_tables);
+                // System.out.println("four tables are"+SeatAllottment.four_tables);
+                // System.out.println("two tables are"+SeatAllottment.two_tables);
+                // System.out.println(" extra chairs are"+SeatAllottment.extra_chairs);
                 
     }
     

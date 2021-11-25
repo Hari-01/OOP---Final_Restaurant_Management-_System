@@ -6,8 +6,8 @@ public class SeatUnoccupied implements Runnable{
     SeatUnoccupied(SeatAllottment st)
     {
         this.st=st;
-        System.out.println("hello");
-        System.out.println(this.st);
+        // System.out.println("hello");
+        // System.out.println(this.st);
     }
     void seatAdd(int sixTablesUsed,int fourTablesUsed,int twoTablesUsed, int extraChairsUsed)
     {
@@ -19,9 +19,9 @@ public class SeatUnoccupied implements Runnable{
     public void run()
     {
         try{
-            Thread.sleep(/*15*60*/10*1000);
+            Thread.sleep(15*60*1000);
             seatAdd(st.sixTablesUsed,st.fourTablesUsed,st.twoTablesUsed,st.extraChairsUsed);
-            System.out.println("Executed");
+            System.out.println("One of the group of customers is finished eating");
         }
         catch(InterruptedException e)
         {
